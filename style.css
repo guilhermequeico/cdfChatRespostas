@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #07141D;
+}
+
+#cards {
+    width: 600px;
+    margin: 100px auto;
+}
+
+#cards li {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #FFF;
+    border-radius: 4px;
+    list-style: none;
+}
+
+#cards li label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px;
+
+    font-size: 18px;
+    font-weight: 500;
+    color: #C20000;
+
+    cursor: pointer;
+}
+
+#cards li label span {
+    transform: rotate(90deg);
+
+    font-size: 22px;
+    color: #333;
+}
+
+#cards label + input[type="radio"] {
+    display: none;
+}
+
+#cards .content {
+    max-height: 0;
+    padding: 0 10px;
+    line-height: 26px;
+    overflow: hidden;
+
+    transition: max-height 0.5s;
+}
+
+#cards label + input[type="radio"]:checked + .content {
+    max-height: 400px;
+}
